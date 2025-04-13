@@ -37,18 +37,18 @@ export default function Home() {
           })}
         >
           Read Blog
-        </Link>
+        </Link>        
       </div>
-      <div className="flex flex-col gap-8 h-24  px-6 ring-1 ring-gray-600 rounded-sm">
-        <p className="sm:flex hidden flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-5 -mb-12 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
-          <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
-          brew tap yafai-hub/yafai
-        </p>
-        <p className="sm:flex hidden flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-5 -mb-12 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
-          <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
-          brew install yafai-core
-        </p>
+      <div className="items-center sm;gap-6 xs;gap-6">
+          <p className="flex flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-2 -mb-8 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
+            <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
+            brew tap yafai-hub/yafai
+          </p>
+          <p className="flex flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-8 -mb-2 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
+            <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
+            brew install yafai-core
+          </p>
       </div>
-    </div>
+      </div>
   );
 }

@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   basePath: basePath,
   assetPrefix: basePath ? `${basePath}/` : '/',
   images: {
+    loader: 'akamai',
+    unoptimized: true,
+    path: '',
     remotePatterns: [
       {
         protocol: "https",
