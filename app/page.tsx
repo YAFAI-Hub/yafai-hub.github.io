@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/ui/button";
-import { page_routes } from "@/lib/routes-config";
+// import { page_routes } from "@/lib/routes-config";
 import { MoveUpRightIcon, TerminalSquareIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -18,7 +18,7 @@ export default function Home() {
         Define and Deploy Agentic interfaces.
       </h1>
       <p className="mb-8 md:text-lg text-base  max-w-[1200px] text-muted-foreground text-left sm:text-center">
-        Consume YAFAI's multi agent system on any platform mobile,web,desktop or
+        Consume YAFAI multi agent system on any platform mobile,web,desktop or
         even terminal via YAFAI Link
       </p>
       <div className="sm:flex sm:flex-row grid grid-cols-2 items-center sm;gap-5 gap-3 mb-8">
