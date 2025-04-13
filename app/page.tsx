@@ -39,16 +39,18 @@ export default function Home() {
           Read Blog
         </Link>        
       </div>
+      
       <div className="items-center sm;gap-6 xs;gap-6">
           <p className="flex flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-2 -mb-8 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
-            <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
+            <TerminalSquareIcon size={20} color="#00b30c" strokeWidth={1.5} absoluteStrokeWidth className="w-5 h-5 sm:mr-1 mt-0.5" />
             brew tap yafai-hub/yafai
           </p>
           <p className="flex flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-8 -mb-2 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
-            <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
+            <TerminalSquareIcon size={20} color="#00b30c" strokeWidth={1.5} absoluteStrokeWidth className="w-5 h-5 sm:mr-1 mt-0.5" />
             brew install yafai-core
           </p>
       </div>
       </div>
+ 
   );
 }
