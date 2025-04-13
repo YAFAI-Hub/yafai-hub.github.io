@@ -5,15 +5,11 @@ import { page_routes } from "@/lib/routes-config";
 import { notFound } from "next/navigation";
 import { getCompiledDocsForSlug, getDocFrontmatter } from "@/lib/markdown";
 import { Typography } from "@/components/typography";
-import { Metadata } from "next";
 
 type PageProps = {
   params: Promise<{ slug: string[] }>;
 };
 
-export const metadata: Metadata = {
-  title: "Yafai - Examples",
-};
 export default async function DocsPage(props: PageProps) {
   const params = await props.params;
   const { slug = [] } = params;
