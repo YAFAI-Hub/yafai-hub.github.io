@@ -65,13 +65,13 @@ export default async function BlogPage(props: PageProps) {
         </div>
       </div>
       <div className="!w-full">
-        <div className="w-full mb-7">
+      <div className="relative w-full h-[180px] rounded-md overflow-hidden border bg-black">
           <Image
             src={res.frontmatter.cover}
             alt="cover"
-            width={700}
-            height={400}
-            className="w-full h-[400px] rounded-md border object-cover"
+            quality={80}
+            fill
+            className="object-contain"
           />
         </div>
         <Typography>{res.content}</Typography>

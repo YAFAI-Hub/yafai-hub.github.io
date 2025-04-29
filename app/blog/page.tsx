@@ -50,14 +50,13 @@ function BlogCard({
       className="flex flex-col gap-2 items-start border rounded-md py-5 px-3 min-h-[400px]"
     >
       <h3 className="text-md font-semibold -mt-1 pr-7">{title}</h3>
-      <div className="w-full">
+      <div className="relative w-full h-[180px] rounded-md overflow-hidden border bg-black">
         <Image
           src={cover}
           alt={title}
-          width={400}
-          height={150}
           quality={80}
-          className="w-full rounded-md object-cover h-[180px] border"
+          fill
+          className="object-contain"
         />
       </div>
       <p className="text-sm text-muted-foreground">{description}</p>
