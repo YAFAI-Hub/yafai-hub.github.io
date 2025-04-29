@@ -1,0 +1,71 @@
+---
+title: "Introducing YAFAI Skills"
+description: "MCP alternative built on gRPC 
+"
+date: 29-04-2025
+authors:
+  - avatar: "https://ui.shadcn.com/avatars/02.png"
+    handle: ssbodpati
+    username: Sushanth Bodapati 
+    handleUrl: "https://github.com/ssbodapati"
+cover: "/banner.png"
+---
+
+# Yafai Skills 🚀
+
+## Yafai Skills is the Tools Framework for YAFAI Agents
+
+YAFAI Skills provides a robust framework designed to extend the capabilities of YAFAI agents. By integrating this toolset, you can enhance the functionality of your YAFAI agents with custom skills and tools, leveraging gRPC for high-performance interactions.
+
+### Description
+
+YAFAI skills is the tools framework that enables you to build and integrate new skills into your YAFAI agents. It empowers your agents with more advanced abilities, improving their performance and adaptability.
+
+### Features
+
+- **REST API based**: Seamlessly integrates with RESTful APIs for ease of use and compatibility.
+- **Authentication support**: Implements API token-based authentication, with the ability to piggyback on existing RBAC systems for enhanced security.
+
+### Installation
+
+To install YAFAI Skills, you can easily use Homebrew. Run the following commands in your terminal:
+
+```bash
+brew tap yafai-hub/yafai
+brew install yafai-skill
+```
+
+### Parameters to Skill Engine
+To start the Skill Engine with the necessary configurations, you can run the binary with the following parameters:
+
+```bash
+// Run the skill engine with the below params
+yafai-skill -m [manifest file path] -k [api key for the service]
+yafai-skill -h // for help on parameters
+```
+
+
+### Skill Manifest File
+The skill manifest file is the central configuration point for defining your skill server. Below is an example of a v0.0.1 version of the manifest file:
+
+```yaml
+
+name: ServiceName
+description: YAFAI skills for ServiceName
+actions:
+  Action1:
+    desc: Action Description
+    base_url: Service URL with placeholders (e.g., service.com/{url_path}/{query_param})
+    method: POST
+    params:
+      - {name: test-param1, type: string, in: path, desc: "Param1.", required: true}
+      - {name: test-param2, type: string, in: query, desc: "Param2.", required: true}
+      - {name: test-param3, type: string, in: body, desc: "Param3", required: true}
+    response_template: # Golang text templates for preparing responses
+      success: "Completed action with {{.response}}'"
+      failure: "Failed to complete action: {{.Error}}"
+```
+Pre-built Manifests Coming Soon!!
+
+Stay tuned for more pre-built manifests that you can use out-of-the-box to quickly deploy skills into your YAFAI agents.
+

@@ -79,6 +79,7 @@ async function parseMdx<Frontmatter>(rawMdx: string) {
 export type BaseMdxFrontmatter = {
   title: string;
   description: string;
+  author: Author[];
 };
 
 export async function getCompiledDocsForSlug(slug: string) {
@@ -228,10 +229,10 @@ export async function getAllBlogsFrontmatter() {
 }
 
 export async function getCompiledWithPath(slug: string) {
-  const blogFile = path.join(process.cwd(), slug);
+  const guideFile = path.join(process.cwd(), slug);
   try {
-    const rawMdx = await fs.readFile(blogFile, "utf-8");
-    return await parseMdx<BlogMdxFrontmatter>(rawMdx);
+    const rawMdx = await fs.readFile(guideFile, "utf-8");
+    return await parseMdx<BaseMdxFrontmatter>(rawMdx);
   } catch {
     return undefined;
   }
