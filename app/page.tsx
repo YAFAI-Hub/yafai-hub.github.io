@@ -15,7 +15,7 @@ export default function Home() {
         <MoveUpRightIcon className="w-4 h-4 font-extrabold" />
       </Link>
       <h1 className="text-[1.80rem] leading-8 sm:px-8 md:leading-[4.5rem] font-bold mb-4 sm:text-6xl text-left sm:text-center">
-      Turn backend APIs into Conversations
+      Build Agentic Workspaces for any platform
       </h1>
       <p className="mb-8 md:text-lg text-base  max-w-[1200px] text-muted-foreground text-left sm:text-center">
       Define and deploy multi agent systems on mobile,web,desktop or even terminal.
