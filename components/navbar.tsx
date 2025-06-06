@@ -71,11 +71,12 @@ export function Navbar() {
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
-      <BotMessageSquareIcon
-        className="w-6 h-6 text-muted-foreground"
-        strokeWidth={2}
+      <img
+      src="/yafai.svg"
+      alt="YAFAI Logo"
+      className="w-20 h-10"
+      width={350}
       />
-      <h2 className="text-md font-bold font-code">YAFAI</h2>
     </Link>
   );
 }
