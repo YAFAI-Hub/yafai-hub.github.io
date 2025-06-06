@@ -22,7 +22,7 @@ export default function Home() {
       </p>
       <div className="sm:flex sm:flex-row grid grid-cols-2 items-center sm;gap-5 gap-3 mb-8">
         <Link
-          href={`https://github.com/YAFAI-Hub`}
+          href={`https://docs.yafai.in`}
           className={buttonVariants({ className: "px-6", size: "lg" })}
         >
           Get Stared
